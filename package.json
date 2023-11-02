@@ -1,22 +1,26 @@
 {
-  "name": "@hexlet/code",
-  "version": "1.0.0",
-  "description": "project 1",
-  "main": "index.js",
-  "bin": {
-    "code": "bin/brain-games.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VolodiaKuz/frontend-project-44.git"
-  },
-  "author": "VolodiaKuz",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VolodiaKuz/frontend-project-44/issues"
-  },
-  "homepage": "https://github.com/VolodiaKuz/frontend-project-44#readme"
+    "name": "@hexlet/code",
+    "version": "1.0.0",
+    "description": "project 1",
+    "main": "index.js",
+    "type": "module",
+    "bin": {
+        "code": "bin/brain-games.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/VolodiaKuz/frontend-project-44.git"
+    },
+    "author": "VolodiaKuz",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/VolodiaKuz/frontend-project-44/issues"
+    },
+    "homepage": "https://github.com/VolodiaKuz/frontend-project-44#readme",
+    "dependencies": {
+        "readline-sync": "^1.4.10"
+    }
 }
