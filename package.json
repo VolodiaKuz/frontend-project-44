@@ -1,31 +1,32 @@
 {
-    "name": "@hexlet/code",
-    "version": "1.0.0",
-    "description": "project 1",
-    "main": "index.js",
-    "type": "module",
-    "bin": {
-        "code": "bin/brain-games.js"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/VolodiaKuz/frontend-project-44.git"
-    },
-    "author": "VolodiaKuz",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/VolodiaKuz/frontend-project-44/issues"
-    },
-    "homepage": "https://github.com/VolodiaKuz/frontend-project-44#readme",
-    "dependencies": {
-        "readline-sync": "^1.4.10"
-    },
-    "devDependencies": {
-        "eslint": "^8.52.0",
-        "eslint-config-airbnb-base": "^15.0.0",
-        "eslint-plugin-import": "^2.29.0"
-    }
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "project 1",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VolodiaKuz/frontend-project-44.git"
+  },
+  "author": "VolodiaKuz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VolodiaKuz/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/VolodiaKuz/frontend-project-44#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0"
+  }
 }
