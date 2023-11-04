@@ -8,4 +8,4 @@ Maintainability:
 
 Asciinema of "brain-even" game:
 <br>
-[![asciicast](https://asciinema.org/a/uvorsUetSeXoXvx5VXjQps1ey.svg)](https://asciinema.org/a/uvorsUetSeXoXvx5VXjQps1ey)
+<a href="https://asciinema.org/a/uvorsUetSeXoXvx5VXjQps1ey" target="_blank"><img src="https://asciinema.org/a/uvorsUetSeXoXvx5VXjQps1ey.svg" /></a>
