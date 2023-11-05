@@ -37,22 +37,23 @@ const brainCalc = () => {
     const number2 = getRandomInt(20);
     const operation = getRandomSign();
     const correctAnswer = calculate(number1, number2, operation);
-    //console.log(correctAnswer);
+
     console.log('What is the result of the expression?');
     console.log(`${number1} ${operation} ${number2}`);
     let userAnswer = readlineSync.question('Your answer: ');
-    if (typeof userAnswer === 'string') {
+
+    if (Number(userAnswer) === NaN) {
       console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was ${correctAnswer}.`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
       );
       return;
     }
-    userAnswer = Number(userAnswer);
-    if (userAnswer === correctAnswer) {
+
+    if (Number(userAnswer) === correctAnswer) {
       console.log('Correct!');
     } else {
       console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was ${correctAnswer}.`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
       );
       console.log(`Let's try again, ${name}`);
       return;

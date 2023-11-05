@@ -9,3 +9,7 @@ Maintainability:
 Asciinema of "brain-even" game:
 <br>
 https://asciinema.org/a/3kCnB4VZDkXRif6OJtZO3PiRB
+
+Asciinema of "brain-calc" game:
+<br>
+https://asciinema.org/a/h9SQJXaMO0bVR0aKMhAJ5RaAj
