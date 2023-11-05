@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import greeting from '../src/index.js';
+import greeting from '../index.js';
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -41,6 +41,12 @@ const brainCalc = () => {
     console.log('What is the result of the expression?');
     console.log(`${number1} ${operation} ${number2}`);
     let userAnswer = readlineSync.question('Your answer: ');
+    if (typeof userAnswer === 'string') {
+      console.log(
+        `'${userAnswer}' is wrong answer ;(. Correct answer was ${correctAnswer}.`
+      );
+      return;
+    }
     userAnswer = Number(userAnswer);
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
