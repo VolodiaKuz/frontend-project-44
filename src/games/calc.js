@@ -1,9 +1,5 @@
 import readlineSync from 'readline-sync';
-import greeting from '../index.js';
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
+import { getRandomInt, greeting } from '../index.js';
 
 const getRandomSign = () => {
   let randomOperation = getRandomInt(3);
@@ -28,6 +24,18 @@ const calculate = (a, b, c) => {
   }
 };
 
+const check = (userAnswer, correctAnswer, userName) => {
+  if (Number(userAnswer) === correctAnswer) {
+    console.log('Correct!');
+  } else {
+    console.log(
+      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+    );
+    console.log(`Let's try again, ${userName}`);
+    return false;
+  }
+};
+
 const brainCalc = () => {
   const name = greeting();
   const roundsNumber = 3;
@@ -40,16 +48,17 @@ const brainCalc = () => {
 
     console.log('What is the result of the expression?');
     console.log(`${number1} ${operation} ${number2}`);
-    let userAnswer = readlineSync.question('Your answer: ');
+    const userAnswer = readlineSync.question('Your answer: ');
 
     if (Number(userAnswer) === NaN) {
       console.log(
         `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
       );
+      console.log(`Let's try again, ${name}`);
       return;
     }
 
-    if (Number(userAnswer) === correctAnswer) {
+    /*     if (Number(userAnswer) === correctAnswer) {
       console.log('Correct!');
     } else {
       console.log(
@@ -57,9 +66,11 @@ const brainCalc = () => {
       );
       console.log(`Let's try again, ${name}`);
       return;
-    }
+    } */
+    let r = check(userAnswer, correctAnswer, name);
+    if (r === false) return;
   }
-  console.log(`Congratulations, ${name}`);
+  return console.log(`Congratulations, ${name}`);
 };
 
 export default brainCalc;
