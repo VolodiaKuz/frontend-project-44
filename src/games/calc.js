@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomInt, greeting } from '../index.js';
+import { getRandomInt, greeting, check } from '../index.js';
 
 const getRandomSign = () => {
   let randomOperation = getRandomInt(3);
@@ -24,18 +24,6 @@ const calculate = (a, b, c) => {
   }
 };
 
-const check = (userAnswer, correctAnswer, userName) => {
-  if (Number(userAnswer) === correctAnswer) {
-    console.log('Correct!');
-  } else {
-    console.log(
-      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
-    );
-    console.log(`Let's try again, ${userName}`);
-    return false;
-  }
-};
-
 const brainCalc = () => {
   const name = greeting();
   const roundsNumber = 3;
@@ -47,7 +35,7 @@ const brainCalc = () => {
     const correctAnswer = calculate(number1, number2, operation);
 
     console.log('What is the result of the expression?');
-    console.log(`${number1} ${operation} ${number2}`);
+    console.log(`Question: ${number1} ${operation} ${number2}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (Number(userAnswer) === NaN) {
