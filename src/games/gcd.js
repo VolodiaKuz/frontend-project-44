@@ -34,7 +34,7 @@ const gcd = (a, b) => {
       smallestNumber = remainder;
     }
 
-    console.log(`НОД = ${nod}`);
+    //console.log(`НОД = ${nod}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     let r = check(userAnswer, nod, name);
