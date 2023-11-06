@@ -10,3 +10,15 @@ export const greeting = () => {
 export function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
+
+export const check = (userAnswer, correctAnswer, userName) => {
+  if (Number(userAnswer) === correctAnswer) {
+    console.log('Correct!');
+  } else {
+    console.log(
+      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+    );
+    console.log(`Let's try again, ${userName}`);
+    return false;
+  }
+};
