@@ -17,3 +17,7 @@ https://asciinema.org/a/h9SQJXaMO0bVR0aKMhAJ5RaAj
 Asciinema of "brain-calc" game:
 <br>
 https://asciinema.org/a/jYfALcYnEJiV5Mz55tp83kG2g
+
+Asciinema of "brain-calc" game:
+<br>
+https://asciinema.org/a/J2sDWYC5fEs22SyeGfQEbueAH
