@@ -4,13 +4,13 @@ import { getRandomInt, greeting, check } from '../index.js';
 const progression = () => {
   const name = greeting();
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i += 1) {
     const firstElement = getRandomInt(20);
     const arr1 = [firstElement];
     const elementIncrement = getRandomInt(6) + 1;
 
-    for (let i = 0; i < 9; i++) {
-      arr1.push(arr1[i] + elementIncrement);
+    for (let j = 0; j < 9; j += 1) {
+      arr1.push(arr1[j] + elementIncrement);
     }
 
     const randomElement = getRandomInt(10);
@@ -22,10 +22,10 @@ const progression = () => {
     console.log(`Question: ${arrayWithSpace}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    let r = check(Number(userAnswer), correctAnswer, name);
+    const r = check(Number(userAnswer), correctAnswer, name);
     if (r === false) return;
   }
-  return console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}`);
 };
 
 export default progression;

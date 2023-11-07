@@ -16,19 +16,18 @@ const getRandomSign = () => {
 const calculate = (a, b, c) => {
   if (c === '+') {
     return a + b;
-  } else if (c === '-') {
+  }
+  if (c === '-') {
     return a - b;
   }
-  if (c === '*') {
-    return a * b;
-  }
+  return a * b;
 };
 
 const brainCalc = () => {
   const name = greeting();
   const roundsNumber = 3;
 
-  for (let i = 0; i < roundsNumber; i++) {
+  for (let i = 0; i < roundsNumber; i += 1) {
     const number1 = getRandomInt(20);
     const number2 = getRandomInt(20);
     const operation = getRandomSign();
@@ -39,17 +38,15 @@ const brainCalc = () => {
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (Number(userAnswer) === NaN) {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
-      );
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}`);
       return;
     }
 
-    let r = check(Number(userAnswer), correctAnswer, name);
+    const r = check(Number(userAnswer), correctAnswer, name);
     if (r === false) return;
   }
-  return console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}`);
 };
 
 export default brainCalc;

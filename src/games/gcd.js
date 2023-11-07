@@ -1,13 +1,13 @@
 import readlineSync from 'readline-sync';
 import { getRandomInt, greeting, check } from '../index.js';
 
-const gcd = (a, b) => {
+const gcd = () => {
   const name = greeting();
 
-  for (let i = 0; i < 3; i++) {
-    a = getRandomInt(50) * 2;
-    b = getRandomInt(50) * 2;
-    //сделать массив с подходящими числами и брать из него случайный эллемент
+  for (let i = 0; i < 3; i += 1) {
+    const a = getRandomInt(50) * 2;
+    const b = getRandomInt(50) * 2;
+    // сделать массив с подходящими числами и брать из него случайный эллемент
 
     console.log('Find the greatest common divisor of given numbers.');
     console.log(`Question: ${a} ${b}`);
@@ -34,13 +34,13 @@ const gcd = (a, b) => {
       smallestNumber = remainder;
     }
 
-    //console.log(`НОД = ${nod}`);
+    // console.log(`НОД = ${nod}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    let r = check(Number(userAnswer), nod, name);
+    const r = check(Number(userAnswer), nod, name);
     if (r === false) return;
   }
-  return console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}`);
 };
 
 export default gcd;

@@ -28,7 +28,7 @@ const getRandomNumber = () => {
 const prime = () => {
   const name = greeting();
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i += 1) {
     let correctAnswer;
 
     const number = getRandomNumber(200);
@@ -37,8 +37,8 @@ const prime = () => {
       correctAnswer = 'no';
     }
 
-    for (let i = 2; i < number; i++) {
-      if (number % i === 0) {
+    for (let j = 2; j < number; j += 1) {
+      if (number % j === 0) {
         correctAnswer = 'no';
         break;
       } else {
@@ -46,16 +46,14 @@ const prime = () => {
       }
     }
 
-    console.log(
-      'Answer "yes" if given number is prime. Otherwise answer "no".'
-    );
+    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
     console.log(`Question: ${number}`);
-    let userAnswer = readlineSync.question('Your answer: ');
+    const userAnswer = readlineSync.question('Your answer: ');
 
-    let r = check(userAnswer, correctAnswer, name);
+    const r = check(userAnswer, correctAnswer, name);
     if (r === false) return;
   }
-  return console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}`);
 };
 
 export default prime;
