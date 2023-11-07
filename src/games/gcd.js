@@ -37,7 +37,7 @@ const gcd = (a, b) => {
     //console.log(`НОД = ${nod}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    let r = check(userAnswer, nod, name);
+    let r = check(Number(userAnswer), nod, name);
     if (r === false) return;
   }
   return console.log(`Congratulations, ${name}`);

@@ -21,3 +21,7 @@ https://asciinema.org/a/jYfALcYnEJiV5Mz55tp83kG2g
 Asciinema of "brain-progression" game:
 <br>
 https://asciinema.org/a/J2sDWYC5fEs22SyeGfQEbueAH
+
+Asciinema of "brain-progression" game:
+<br>
+https://asciinema.org/a/Y4GNTcMnYKENKgjxJIsn6coGd
