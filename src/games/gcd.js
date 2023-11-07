@@ -40,7 +40,7 @@ const gcd = () => {
     const r = check(Number(userAnswer), nod, name);
     if (r === false) return;
   }
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default gcd;

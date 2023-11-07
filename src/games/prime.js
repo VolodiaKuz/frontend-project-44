@@ -53,7 +53,7 @@ const prime = () => {
     const r = check(userAnswer, correctAnswer, name);
     if (r === false) return;
   }
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default prime;

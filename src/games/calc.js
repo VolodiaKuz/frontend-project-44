@@ -39,14 +39,14 @@ const brainCalc = () => {
 
     if (Number(userAnswer) === NaN) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${name}`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
 
     const r = check(Number(userAnswer), correctAnswer, name);
     if (r === false) return;
   }
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default brainCalc;

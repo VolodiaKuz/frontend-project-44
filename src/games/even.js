@@ -17,21 +17,21 @@ const even = () => {
     } else if (random % 2 === 0 && answer === 'no') {
       return (
         console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.`),
-        console.log(`Let's try again, ${name}`)
+        console.log(`Let's try again, ${name}!`)
       );
     } else if (random % 2 !== 0 && answer === 'yes') {
       return (
         console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.`),
-        console.log(`Let's try again, ${name}`)
+        console.log(`Let's try again, ${name}!`)
       );
     } else {
       return (
         console.log(`'${answer}' is wrong answer ;(.`),
-        console.log(`Let's try again, ${name}`)
+        console.log(`Let's try again, ${name}!`)
       );
     }
   }
-  return console.log(`Congratulations, ${name}`);
+  return console.log(`Congratulations, ${name}!`);
 };
 
 export default even;
