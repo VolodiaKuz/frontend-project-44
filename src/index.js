@@ -14,11 +14,11 @@ export function getRandomInt(max) {
 export const check = (userAnswer, correctAnswer, userName) => {
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
-  } else {
-    console.log(
-      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
-    );
-    console.log(`Let's try again, ${userName}!`);
-    return false;
+    return true;
   }
+  console.log(
+    `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
+  );
+  console.log(`Let's try again, ${userName}!`);
+  return false;
 };

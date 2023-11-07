@@ -22,7 +22,7 @@ const progression = () => {
     console.log(`Question: ${arrayWithSpace}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    const r = check(Number(userAnswer), correctAnswer, name);
+    const r = check(userAnswer, String(correctAnswer), name);
     if (r === false) return;
   }
   console.log(`Congratulations, ${name}!`);

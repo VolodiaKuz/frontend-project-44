@@ -37,13 +37,7 @@ const brainCalc = () => {
     console.log(`Question: ${number1} ${operation} ${number2}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (Number(userAnswer) === NaN) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${name}!`);
-      return;
-    }
-
-    const r = check(Number(userAnswer), correctAnswer, name);
+    const r = check(userAnswer, String(correctAnswer), name);
     if (r === false) return;
   }
   console.log(`Congratulations, ${name}!`);
