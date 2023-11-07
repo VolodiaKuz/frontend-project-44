@@ -12,7 +12,7 @@ export function getRandomInt(max) {
 }
 
 export const check = (userAnswer, correctAnswer, userName) => {
-  if (Number(userAnswer) === correctAnswer) {
+  if (userAnswer === correctAnswer) {
     console.log('Correct!');
   } else {
     console.log(

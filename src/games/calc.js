@@ -46,7 +46,7 @@ const brainCalc = () => {
       return;
     }
 
-    let r = check(userAnswer, correctAnswer, name);
+    let r = check(Number(userAnswer), correctAnswer, name);
     if (r === false) return;
   }
   return console.log(`Congratulations, ${name}`);
