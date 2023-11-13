@@ -2,14 +2,8 @@ import readlineSync from 'readline-sync';
 import { getRandomInt, greeting, check } from '../index.js';
 
 const getRandomSign = () => {
-  let randomOperation = getRandomInt(0, 3);
-  if (randomOperation === 0) {
-    randomOperation = '+';
-  } else if (randomOperation === 1) {
-    randomOperation = '-';
-  } else if (randomOperation === 2) {
-    randomOperation = '*';
-  }
+  const signsArr = ['+', '-', '*'];
+  const randomOperation = signsArr[getRandomInt(0, 3)];
   return randomOperation;
 };
 
@@ -25,9 +19,8 @@ const calculate = (a, b, c) => {
 
 const brainCalc = () => {
   const name = greeting();
-  const roundsNumber = 3;
 
-  for (let i = 0; i < roundsNumber; i += 1) {
+  for (let i = 0; i < 3; i += 1) {
     const number1 = getRandomInt(0, 20);
     const number2 = getRandomInt(0, 20);
     const operation = getRandomSign();
