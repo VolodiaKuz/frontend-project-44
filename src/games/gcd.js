@@ -5,8 +5,8 @@ const gcd = () => {
   const name = greeting();
 
   for (let i = 0; i < 3; i += 1) {
-    const a = getRandomInt(50) * 2;
-    const b = getRandomInt(50) * 2;
+    const a = getRandomInt(1, 50) * 2;
+    const b = getRandomInt(1, 50) * 2;
     // сделать массив с подходящими числами и брать из него случайный эллемент
 
     console.log('Find the greatest common divisor of given numbers.');

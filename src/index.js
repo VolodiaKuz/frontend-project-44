@@ -7,8 +7,10 @@ export const greeting = () => {
   return name;
 };
 
-export function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+export function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 }
 
 export const check = (userAnswer, correctAnswer, userName) => {
@@ -17,7 +19,7 @@ export const check = (userAnswer, correctAnswer, userName) => {
     return true;
   }
   console.log(
-    `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
+    `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
   );
   console.log(`Let's try again, ${userName}!`);
   return false;

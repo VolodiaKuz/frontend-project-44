@@ -14,8 +14,8 @@ const getRandomNumber = () => {
     613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 677, 683, 691, 701,
     709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809,
   ];
-  const randomPrime = arr1[getRandomInt(57)];
-  const randomNotPrime = getRandomInt(300);
+  const randomPrime = arr1[getRandomInt(1, 57)];
+  const randomNotPrime = getRandomInt(1, 300);
 
   if (randomPrime > randomNotPrime) {
     randomQuestion = randomPrime;
@@ -46,7 +46,9 @@ const prime = () => {
       }
     }
 
-    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+    console.log(
+      'Answer "yes" if given number is prime. Otherwise answer "no".'
+    );
     console.log(`Question: ${number}`);
     const userAnswer = readlineSync.question('Your answer: ');
 

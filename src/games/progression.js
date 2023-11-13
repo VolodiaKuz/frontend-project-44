@@ -5,15 +5,15 @@ const progression = () => {
   const name = greeting();
 
   for (let i = 0; i < 3; i += 1) {
-    const firstElement = getRandomInt(20);
+    const firstElement = getRandomInt(0, 20);
     const arr1 = [firstElement];
-    const elementIncrement = getRandomInt(6) + 1;
+    const elementIncrement = getRandomInt(0, 6) + 1;
 
     for (let j = 0; j < 9; j += 1) {
       arr1.push(arr1[j] + elementIncrement);
     }
 
-    const randomElement = getRandomInt(10);
+    const randomElement = getRandomInt(0, 10);
     const correctAnswer = arr1[randomElement];
     arr1[randomElement] = '..';
 

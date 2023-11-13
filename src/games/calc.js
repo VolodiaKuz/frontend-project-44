@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import { getRandomInt, greeting, check } from '../index.js';
 
 const getRandomSign = () => {
-  let randomOperation = getRandomInt(3);
+  let randomOperation = getRandomInt(0, 3);
   if (randomOperation === 0) {
     randomOperation = '+';
   } else if (randomOperation === 1) {
@@ -28,8 +28,8 @@ const brainCalc = () => {
   const roundsNumber = 3;
 
   for (let i = 0; i < roundsNumber; i += 1) {
-    const number1 = getRandomInt(20);
-    const number2 = getRandomInt(20);
+    const number1 = getRandomInt(0, 20);
+    const number2 = getRandomInt(0, 20);
     const operation = getRandomSign();
     const correctAnswer = calculate(number1, number2, operation);
 
