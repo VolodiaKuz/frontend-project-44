@@ -6,6 +6,27 @@ Maintainability:
 <br>
 <a href="https://codeclimate.com/github/VolodiaKuz/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/feb9f6fc95757e3e45d3/maintainability" /></a>
 
+## About
+
+This is a console game - "Brain-games". The game has 5 different mini-games: brain-even, brain-calc, brain-gcd, brain-progression, brain-prime.
+
+## Installation
+
+```bash
+make install
+npm link
+```
+
+## Running
+
+```bash
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
+```
+
 Asciinema of "brain-even" game:
 <br>
 https://asciinema.org/a/3kCnB4VZDkXRif6OJtZO3PiRB

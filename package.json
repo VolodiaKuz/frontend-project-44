@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "project 1",
+  "description": "My 1st studying project on Hexlet. It is a console game - 'Brain-games'",
   "main": "index.js",
   "type": "module",
   "bin": {
