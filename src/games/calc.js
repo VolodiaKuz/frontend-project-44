@@ -7,14 +7,15 @@ const getRandomSign = () => {
   return randomOperation;
 };
 
-const calculate = (a, b, c) => {
-  if (c === '+') {
-    return a + b;
+const doRandomOperation = (a, b, c) => {
+  switch (c) {
+    case '+':
+      return a + b;
+    case '-':
+      return a - b;
+    case '*':
+      return a * b;
   }
-  if (c === '-') {
-    return a - b;
-  }
-  return a * b;
 };
 
 const brainCalc = () => {
@@ -24,7 +25,7 @@ const brainCalc = () => {
     const number1 = getRandomInt(0, 20);
     const number2 = getRandomInt(0, 20);
     const operation = getRandomSign();
-    const correctAnswer = calculate(number1, number2, operation);
+    const correctAnswer = doRandomOperation(number1, number2, operation);
 
     console.log('What is the result of the expression?');
     console.log(`Question: ${number1} ${operation} ${number2}`);
