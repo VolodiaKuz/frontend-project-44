@@ -11,15 +11,12 @@ const even = () => {
     const answer = readlineSync.question('Your answer: ');
 
     if (
-      (random % 2 === 0 && answer === 'yes') ||
-      (random % 2 !== 0 && answer === 'no')
+      (random % 2 === 0 && answer === 'yes') || (random % 2 !== 0 && answer === 'no')
     ) {
       console.log('Correct!');
     } else if (random % 2 === 0 && answer === 'no') {
       return (
-        console.log(
-          `'${answer}' is wrong answer ;(. Correct answer was 'yes'.`
-        ),
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.`),
         console.log(`Let's try again, ${name}!`)
       );
     } else if (random % 2 !== 0 && answer === 'yes') {

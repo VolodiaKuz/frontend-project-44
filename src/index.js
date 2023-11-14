@@ -8,9 +8,9 @@ export const greeting = () => {
 };
 
 export function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 }
 
 export const check = (userAnswer, correctAnswer, userName) => {
@@ -18,9 +18,22 @@ export const check = (userAnswer, correctAnswer, userName) => {
     console.log('Correct!');
     return true;
   }
-  console.log(
-    `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
-  );
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
   console.log(`Let's try again, ${userName}!`);
   return false;
+};
+
+export const startGame = (gameType) => {
+  const name = greeting();
+  const [,, rules] = gameType();
+  console.log(rules);
+
+  for (let i = 0; i < 3; i += 1) {
+    const [question, correctAnswer] = gameType();
+    console.log(question);
+    const userAnswer = readlineSync.question('Your answer: ');
+    const r = check(userAnswer, String(correctAnswer), name);
+    if (r === false) return;
+  }
+  console.log(`Congratulations, ${name}!`);
 };

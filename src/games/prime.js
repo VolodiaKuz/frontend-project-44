@@ -46,9 +46,7 @@ const prime = () => {
       }
     }
 
-    console.log(
-      'Answer "yes" if given number is prime. Otherwise answer "no".'
-    );
+    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
     console.log(`Question: ${number}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
