@@ -1,5 +1,7 @@
 import { getRandomInt, startGame } from '../index.js';
 
+const rules = 'What is the result of the expression?';
+
 const getRandomSign = () => {
   const signsArr = ['+', '-', '*'];
   const randomOperation = signsArr[getRandomInt(0, 3)];
@@ -20,7 +22,6 @@ const doRandomOperation = (a, b, c) => {
 };
 
 const brainCalc = () => {
-  const rules = 'What is the result of the expression?';
   const number1 = getRandomInt(0, 20);
   const number2 = getRandomInt(0, 20);
   const operation = getRandomSign();
