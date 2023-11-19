@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { getRandomInt, startGame } from '../index.js';
 
 const rules = 'Find the greatest common divisor of given numbers.';
@@ -6,8 +5,6 @@ const rules = 'Find the greatest common divisor of given numbers.';
 const brainGcd = () => {
   const a = getRandomInt(1, 50) * 2;
   const b = getRandomInt(1, 50) * 2;
-  // сделать массив с подходящими числами и брать из него случайный эллемент 
-
   let biggestNumber;
   let smallestNumber;
   if (a > b) {
@@ -25,10 +22,10 @@ const brainGcd = () => {
     if (remainder === 0) {
       nod = smallestNumber;
       break;
-      }
+    }
     biggestNumber = smallestNumber;
     smallestNumber = remainder;
-    }
+  }
 
   const correctAnswer = nod;
   const question = `Question: ${a} ${b}`;
