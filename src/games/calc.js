@@ -30,5 +30,5 @@ const brainCalc = () => {
   return [question, correctAnswer, rules];
 };
 
-const StartBrainCalc = () => startGame(brainCalc);
-export default StartBrainCalc;
+const startBrainCalc = () => startGame(brainCalc);
+export default startBrainCalc;
