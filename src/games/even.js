@@ -3,14 +3,16 @@ import { getRandomInt } from '../utils.js';
 
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const brainEven = () => {
-  const random = getRandomInt(0, 15);
-  const question = `Question: ${random}`;
-  let correctAnswer;
-  if (random % 2 === 0) {
-    correctAnswer = 'yes';
-  } else correctAnswer = 'no';
+const isEven = (num) => {
+  if (num % 2 === 0) {
+    return 'yes';
+  } else return 'no';
+}
 
+const brainEven = () => {
+  const randomNumber = getRandomInt(0, 15);
+  const question = `Question: ${randomNumber}`;
+  let correctAnswer = isEven(randomNumber);
   return [question, correctAnswer, rules];
 };
 

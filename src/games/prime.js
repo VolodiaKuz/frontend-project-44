@@ -3,6 +3,23 @@ import { getRandomInt } from '../utils.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
+const isPrime = (number) => {
+  if (number === 0 || number === 1) {
+    return 'no';
+  }
+
+  if (number === 2) {
+    return 'yes';
+  }
+
+  for (let j = 2; j < number; j += 1) {
+    if (number % j === 0) {
+      return 'no';
+    }
+  }
+  return 'yes';
+}
+
 const getRandomNumber = () => {
   let randomQuestion;
   const arr1 = [
@@ -28,26 +45,9 @@ const getRandomNumber = () => {
 };
 
 const brainPrime = () => {
-  const number = getRandomNumber(200);
-  let correctAnswer;
-
-  if (number === 0 || number === 1) {
-    correctAnswer = 'no';
-  }
-
-  if (number === 2) {
-    correctAnswer = 'yes';
-  }
-
-  for (let j = 2; j < number; j += 1) {
-    if (number % j === 0) {
-      correctAnswer = 'no';
-      break;
-    } else {
-      correctAnswer = 'yes';
-    }
-  }
-  const question = `Question: ${number}`;
+  const randomNumber = getRandomNumber(200);
+  const correctAnswer = isPrime(randomNumber);
+  const question = `Question: ${randomNumber}`;
   return [question, correctAnswer, rules];
 };
 
