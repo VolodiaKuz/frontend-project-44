@@ -1,5 +1,5 @@
 import { startGame } from '../index.js';
-import { getRandomInt } from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -18,7 +18,7 @@ const isPrime = (number) => {
     }
   }
   return 'yes';
-}
+};
 
 const brainPrime = () => {
   const randomNumber = getRandomInt(1, 300);

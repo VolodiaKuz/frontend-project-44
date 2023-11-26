@@ -1,18 +1,19 @@
 import { startGame } from '../index.js';
-import { getRandomInt } from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => {
   if (num % 2 === 0) {
     return 'yes';
-  } else return 'no';
-}
+  }
+  return 'no';
+};
 
 const brainEven = () => {
   const randomNumber = getRandomInt(0, 15);
   const question = `Question: ${randomNumber}`;
-  let correctAnswer = isEven(randomNumber);
+  const correctAnswer = isEven(randomNumber);
   return [question, correctAnswer, rules];
 };
 
