@@ -9,16 +9,16 @@ const getRandomSign = () => {
   return randomOperation;
 };
 
-const doRandomOperation = (a, b, c) => {
-  switch (c) {
+const doRandomOperation = (num1, num2, operator) => {
+  switch (operator) {
     case '+':
-      return a + b;
+      return num1 + num2;
     case '-':
-      return a - b;
+      return num1 - num2;
     case '*':
-      return a * b;
+      return num1 * num2;
     default:
-      return console.log('doRandomOperation function crushed');
+      return console.log(`Error at /index.js:10: Unknown operator into doRandomOperation function: '${operator}'.`);
   }
 };
 
