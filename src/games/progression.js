@@ -1,4 +1,5 @@
-import { getRandomInt, startGame } from '../index.js';
+import { startGame } from '../index.js';
+import { getRandomInt } from '../utils.js';
 
 const rules = 'What number is missing in the progression?';
 

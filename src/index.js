@@ -7,12 +7,6 @@ export const greeting = () => {
   return name;
 };
 
-export function getRandomInt(min, max) {
-  const minCeiled = Math.ceil(min);
-  const maxFloored = Math.floor(max);
-  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
-}
-
 export const check = (userAnswer, correctAnswer, userName) => {
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
