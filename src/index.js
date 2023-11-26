@@ -7,16 +7,6 @@ export const greeting = () => {
   return name;
 };
 
-export const check = (userAnswer, correctAnswer, userName) => {
-  if (userAnswer === correctAnswer) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-  console.log(`Let's try again, ${userName}!`);
-  return false;
-};
-
 export const startGame = (gameType) => {
   const name = greeting();
   const [,, rules] = gameType();
@@ -26,8 +16,13 @@ export const startGame = (gameType) => {
     const [question, correctAnswer] = gameType();
     console.log(question);
     const userAnswer = readlineSync.question('Your answer: ');
-    const r = check(userAnswer, String(correctAnswer), name);
-    if (r === false) return;
+
+    if (userAnswer === String(correctAnswer)) {
+      console.log('Correct!');
+      continue;
+    }
+    console.log(`'${name}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    return console.log(`Let's try again, ${name}!`);
   }
   console.log(`Congratulations, ${name}!`);
 };
