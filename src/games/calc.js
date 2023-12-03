@@ -3,14 +3,13 @@ import getRandomInt from '../utils.js';
 
 const rules = 'What is the result of the expression?';
 
-const getRandomSign = () => {
-  const signsArr = ['+', '-', '*'];
-  const randomOperation = signsArr[getRandomInt(0, 3)];
-  return randomOperation;
+const getRandomOperation = () => {
+  const randomSignsArray = ['+', '-', '*'];
+  return randomSignsArray[getRandomInt(0, 3)];
 };
 
-const doRandomOperation = (num1, num2, operator) => {
-  switch (operator) {
+const doRandomOperation = (num1, num2, randomOperation) => {
+  switch (randomOperation) {
     case '+':
       return num1 + num2;
     case '-':
@@ -18,16 +17,16 @@ const doRandomOperation = (num1, num2, operator) => {
     case '*':
       return num1 * num2;
     default:
-      throw new Error(`Unknown operator: '${operator}'!`);
+      throw new Error(`Unknown operator: '${randomOperation}'!`);
   }
 };
 
 const brainCalc = () => {
   const number1 = getRandomInt(0, 20);
   const number2 = getRandomInt(0, 20);
-  const operation = getRandomSign();
-  const correctAnswer = doRandomOperation(number1, number2, operation);
-  const question = `Question: ${number1} ${operation} ${number2}`;
+  const randomOperation = getRandomOperation();
+  const correctAnswer = doRandomOperation(number1, number2, randomOperation);
+  const question = `Question: ${number1} ${randomOperation} ${number2}`;
   return [question, correctAnswer, rules];
 };
 

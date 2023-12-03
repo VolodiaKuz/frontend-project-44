@@ -21,7 +21,7 @@ export const startGame = (gameType) => {
     if (userAnswer === String(correctAnswer)) {
       console.log('Correct!');
     } else if (userAnswer !== String(correctAnswer)) {
-      console.log(`'${name}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       return console.log(`Let's try again, ${name}!`);
     }
   }
