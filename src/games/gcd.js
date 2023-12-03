@@ -30,7 +30,7 @@ const brainGcd = () => {
 
   const correctAnswer = nod;
   const question = `Question: ${num1} ${num2}`;
-  return [question, correctAnswer, rules];
+  return [question, String(correctAnswer), rules];
 };
 
 const startBrainGcd = () => startGame(brainGcd);

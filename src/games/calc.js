@@ -27,7 +27,7 @@ const brainCalc = () => {
   const randomOperation = getRandomOperation();
   const correctAnswer = doRandomOperation(number1, number2, randomOperation);
   const question = `Question: ${number1} ${randomOperation} ${number2}`;
-  return [question, correctAnswer, rules];
+  return [question, String(correctAnswer), rules];
 };
 
 const startBrainCalc = () => startGame(brainCalc);

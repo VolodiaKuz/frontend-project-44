@@ -19,7 +19,7 @@ const brainProgression = () => {
   const arrayWithSpace = progressionArray.join(' ');
 
   const question = `Question: ${arrayWithSpace}`;
-  return [question, correctAnswer, rules];
+  return [question, String(correctAnswer), rules];
 };
 
 const startBrainProgression = () => startGame(brainProgression);
