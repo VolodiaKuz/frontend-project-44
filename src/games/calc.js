@@ -18,7 +18,7 @@ const doRandomOperation = (num1, num2, operator) => {
     case '*':
       return num1 * num2;
     default:
-      return console.log(`Error at /index.js:10: Unknown operator into doRandomOperation function: '${operator}'.`);
+      throw new Error(`Unknown operator: '${operator}'!`);
   }
 };
 
